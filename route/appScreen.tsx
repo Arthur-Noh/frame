@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { observer } from 'mobx-react';
 import AuthStack from './authStack';
-import AppStack from './appStack';
+import AppBottomTab from './appBottomTab';
 
 interface IAppScreen {
     userToken: string;
@@ -10,12 +10,14 @@ interface IAppScreen {
 
 const AppScreen: React.FC<IAppScreen> = observer((props) => {
     return (
-        <SafeAreaView style={{ flex : 1 }}>
-            { (props.userToken === '' || !props.userToken) ?
-                <AuthStack /> :
-                <AppStack />
-            }
-        </SafeAreaView>
+        <>
+        { (props.userToken === '' || !props.userToken) ? 
+            <SafeAreaView style={{ flex : 1 }}>
+                <AuthStack />
+            </SafeAreaView> :
+            <AppBottomTab />
+        }
+        </>
     );
 });
 
