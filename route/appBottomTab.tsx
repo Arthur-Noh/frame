@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 
 const AppBottomTab = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
             <Tab.Screen
                 key='CreateFormStack'
                 name='CreateForm'
