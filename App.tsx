@@ -18,7 +18,7 @@ const App = () => {
         <SafeAreaProvider>
             <NavigationContainer theme={navigationTheme}>
                 <ThemeProvider theme={theme}>
-                    <AppScreen userToken='aaa' />
+                    <AppScreen userToken='aaaa' />
                 </ThemeProvider>
             </NavigationContainer>
         </SafeAreaProvider>

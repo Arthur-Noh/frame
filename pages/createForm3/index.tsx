@@ -5,6 +5,7 @@ import { Text, TouchableOpacity } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { CreateFormStackParamList } from '../../screenRoute/appDef/createForm/routeDef';
 import { useNavigation } from '@react-navigation/native';
+import useCustomHeader from '../../hooks/useCustomHeader';
 
 const Layout = styled.View`
 flex: 1;
@@ -14,6 +15,8 @@ align-items: center;
 
 const CreateForm3 = observer(() => {
     const navigation = useNavigation<NativeStackNavigationProp<CreateFormStackParamList, 'CreateForm3'>>();
+
+    useCustomHeader({ title: '폼 생성 3' });
 
     return (
         <Layout>
