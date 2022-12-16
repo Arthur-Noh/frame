@@ -10,6 +10,10 @@ const MyPageStack = () => {
             { Object.entries({ ...MyPageStackDef }).map(([ name, { initialParams, component }]) => (
                 <Stack.Screen
                     key={name}
+                    options={{
+                        headerTitleAlign: 'center',
+                        contentStyle: { alignItems: 'center' },
+                    }}
                     // @ts-ignore
                     name={name}
                     component={component}
