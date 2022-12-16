@@ -31,7 +31,7 @@ const useCustomHeader = (customHeaderOption: ICustomerHeaderOption) => {
             headerBackTitle: '',
             headerRight: () => (
                 <HeaderRightButton buttons={headerRightButtons} />
-            )
+            ),
         };
 
         if (useCustomLeftHeader) {
@@ -42,8 +42,8 @@ const useCustomHeader = (customHeaderOption: ICustomerHeaderOption) => {
                         headerTitle={headerLeftButton.headerTitle}
                         customGoBack={headerLeftButton.customGoBack}
                     />
-                )
-            }
+                ),
+            };
         }
 
         navigation.setOptions(options);
